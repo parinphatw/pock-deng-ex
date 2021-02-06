@@ -9,10 +9,9 @@ const rl = readline.createInterface({
 
 //global (initialize once)
 let player_chips = 0;
-let cards = Cards.cards;
 
 // questions
-const betQuestion = () => {
+const betQuestion = (cards) => {
   return new Promise((resolve, reject) => {
     rl.question("Please put your bet\n>", (bet) => {
       playerBet = parseInt(bet);
@@ -53,9 +52,9 @@ async function main() {
   let player_cards;
   let dealer_cards;
   let playerBet = 0;
-  cards = Cards.cards;
+  let cards = Cards.cards;
 
-  await betQuestion();
+  await betQuestion(cards);
   await continueQuestion();
 }
 
