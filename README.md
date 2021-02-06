@@ -18,3 +18,11 @@
 - If you continue, then start step 1 again.
 
 5. At the end of the game, the game shows your net chip on hand.
+
+# How to play
+
+Run `node start`
+
+# How to test
+
+Run `yarn test`
